@@ -52,6 +52,12 @@ describe "Static pages" do
       visit '/static_pages/contact'
       expect(page).to have_title("#{base_title} | Contact")
     end
+    
+    it "should have the content 'Twitter'" do
+      visit '/static_pages/contact'
+      expect(page).to have_content('Twitter')
+    end
+    
   end
       
 end
